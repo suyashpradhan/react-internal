@@ -18,7 +18,7 @@ function App() {
         );
         if (!response.ok) {
           setLoading('error');
-          throw new Error('error');
+          return;
         }
         const data = await response.json();
         setLoading('success');
